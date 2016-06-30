@@ -57,3 +57,13 @@ test('unset', function(t){
 
   t.end();
 });
+
+test('set returns the value you just set', function(t){
+  var s = SymbolTable();
+  t.equals(s.set('a', 1), 1);
+  t.equals(s.set('a', 42), 42);
+  t.equals(s.set('a', t), t);
+  t.equals(s.set('a', s), s);
+  t.equals(s.get('a'), s);
+  t.end();
+});

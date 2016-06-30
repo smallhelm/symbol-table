@@ -13,7 +13,7 @@ module.exports = function makeTable(other_table){
 
   return {
     set: function(symbol, value){
-      table[symbol] = value;
+      return table[symbol] = value;
     },
     get: function(symbol){
       return table[symbol];
