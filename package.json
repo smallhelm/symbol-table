@@ -1,0 +1,32 @@
+{
+  "name": "symbol-table",
+  "version": "0.0.0",
+  "description": "A data structure for tracking symbols in a compiler or interpreter.",
+  "main": "index.js",
+  "scripts": {
+    "start": "onchange -i *.js -- npm test -s",
+    "test": "node tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smallhelm/symbol-table.git"
+  },
+  "keywords": [
+    "symbol-table",
+    "language",
+    "compiler",
+    "interpreter",
+    "symbol",
+    "data-structure"
+  ],
+  "author": "farskipper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smallhelm/symbol-table/issues"
+  },
+  "homepage": "https://github.com/smallhelm/symbol-table#readme",
+  "devDependencies": {
+    "onchange": "^2.5.0",
+    "tape": "^4.6.0"
+  }
+}
