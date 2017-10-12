@@ -1,6 +1,6 @@
 {
   "name": "symbol-table",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A data structure for tracking symbols in a compiler or interpreter.",
   "main": "index.js",
   "scripts": {
