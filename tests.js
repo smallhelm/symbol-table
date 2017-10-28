@@ -76,6 +76,7 @@ test("set returns the value you just set", function(t){
 test("stack", function(t){
     var s = SymbolTableStack();
 
+    t.equals(s.get("a"), void 0);
     t.equals(s.set("a", 1), 1);
     t.equals(s.get("a"), 1);
 

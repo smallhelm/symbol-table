@@ -13,7 +13,10 @@ module.exports = function(){
             }).value;
         },
         get: function(symbol){
-            return symt_stack[0].get(symbol).value;
+            var v = symt_stack[0].get(symbol);
+            return v
+                ? v.value
+                : void 0;
         },
         has: function(symbol){
             return symt_stack[0].has(symbol);
