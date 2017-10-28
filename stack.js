@@ -7,10 +7,13 @@ module.exports = function(){
 
     return {
         set: function(symbol, value){
-            return symt_stack[0].set(symbol, value);
+            return symt_stack[0].set(symbol, {
+                value: value,
+                height: symt_stack.length,
+            }).value;
         },
         get: function(symbol){
-            return symt_stack[0].get(symbol);
+            return symt_stack[0].get(symbol).value;
         },
         has: function(symbol){
             return symt_stack[0].has(symbol);
@@ -25,6 +28,15 @@ module.exports = function(){
         },
         pop: function(){
             return symt_stack.shift();
+        },
+        height: function(){
+            return symt_stack.length;
+        },
+        getItsHeight: function(symbol){
+            var v = symt_stack[0].get(symbol);
+            return v
+                ? v.height
+                : void 0;
         },
     };
 };

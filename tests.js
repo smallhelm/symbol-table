@@ -90,5 +90,29 @@ test("stack", function(t){
     s.pop();
     t.equals(s.get("a"), 1);
 
+    t.equals(s.height(), 1);
+    t.equals(s.getItsHeight("b"), void 0);
+    t.equals(s.set("b", 33), 33);
+    t.equals(s.getItsHeight("b"), 1);
+    s.push();
+    t.equals(s.getItsHeight("b"), 1);
+    t.equals(s.set("b", 44), 44);
+    t.equals(s.get("b"), 44);
+    t.equals(s.getItsHeight("b"), 2);
+    t.equals(s.height(), 2);
+
+    s.push();
+    t.equals(s.getItsHeight("b"), 2);
+    s.push();
+    t.equals(s.getItsHeight("b"), 2);
+    s.pop();
+    t.equals(s.getItsHeight("b"), 2);
+    s.pop();
+    t.equals(s.getItsHeight("b"), 2);
+
+    s.pop();
+    t.equals(s.height(), 1);
+    t.equals(s.get("b"), 33);
+
     t.end();
 });

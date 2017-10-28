@@ -89,5 +89,12 @@ Creates a new table/scope and pushes it on top of the stack. It also returns the
 ### table = s.pop()
 Pops the current table/scope off the stack.
 
+### i = s.height()
+Get the stack height (initially it's 1)
+
+### i = s.getItsHeight(symbol)
+What was the stack height when this symbol was set/defined?
+Returns undefined if the symbol is not found.
+
 ## License
 MIT
