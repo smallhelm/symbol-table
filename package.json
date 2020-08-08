@@ -4,7 +4,6 @@
   "description": "A data structure for tracking symbols in a compiler or interpreter.",
   "main": "index.js",
   "scripts": {
-    "start": "onchange -i *.js -- npm test -s",
     "test": "node tests.js"
   },
   "repository": {
@@ -26,7 +25,6 @@
   },
   "homepage": "https://github.com/smallhelm/symbol-table#readme",
   "devDependencies": {
-    "onchange": "^3.2.1",
-    "tape": "^4.8.0"
+    "tape": "^5.0.1"
   }
 }
