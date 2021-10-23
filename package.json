@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/smallhelm/symbol-table#readme",
   "devDependencies": {
-    "tape": "^5.0.1"
+    "tape": "^5.3.1"
   }
 }
