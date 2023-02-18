@@ -23,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/smallhelm/symbol-table/issues"
   },
-  "homepage": "https://github.com/smallhelm/symbol-table#readme",
-  "devDependencies": {
-    "tape": "^5.3.1"
-  }
+  "homepage": "https://github.com/smallhelm/symbol-table#readme"
 }

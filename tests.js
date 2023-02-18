@@ -1,6 +1,22 @@
-var test = require("tape");
+var assert = require("node:assert");
+var nodeTest = require("node:test");
 var SymbolTable = require("./");
 var SymbolTableStack = require("./stack");
+
+
+// stub for https://www.npmjs.com/package/tape
+function test(name, fn) {
+    nodeTest(name, function () {
+        fn({
+            equals: assert.equal,
+            ok: assert.ok,
+            notOk: function (ok) {
+                assert.ok(!ok);
+            },
+            end: function () {},
+        });
+    });
+};
 
 
 test("it", function(t){
